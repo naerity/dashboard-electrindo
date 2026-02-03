@@ -6,7 +6,7 @@ import {
 export const DataTable = () => {
   const rows = [1, 2, 3, 4];
 
-  const headerBtnStyle = "flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-xs text-gray-500 hover:border-emerald-500 transition-colors whitespace-nowrap";
+  // const headerBtnStyle = "flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-xs text-gray-500 hover:border-emerald-500 transition-colors whitespace-nowrap";
 
   return (
     <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col w-full h-full overflow-hidden">

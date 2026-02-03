@@ -1,4 +1,4 @@
-import { Search, Calendar, ChevronDown, Plus, FileText, CheckCircle, Users } from 'lucide-react';
+import { Search, Calendar, Plus, FileText, CheckCircle, Users } from 'lucide-react';
 import { StatCard } from '../components/molecules/StatCard';
 import { ProjectChart } from '../components/organisms/ProjectChart';
 import { SpeedGauge } from '../components/organisms/SpeedGauge';
