@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- TAMBAHAN DI BAWAH SINI --- */
+
+@layer utilities {
+  /* Class khusus buat sidebar */
+  .sidebar-scroll {
+    overflow-y: auto; /* Tetap bisa discroll */
+    scrollbar-width: thin; /* Firefox: tipis */
+    scrollbar-color: transparent transparent; /* Firefox: transparan default */
+  }
+
+  /* Saat di-hover, baru muncul warna abu-abu */
+  .sidebar-scroll:hover {
+    scrollbar-color: #cbd5e1 transparent; /* Firefox: slate-300 */
+  }
+
+  /* Webkit (Chrome, Edge, Safari) */
+  .sidebar-scroll::-webkit-scrollbar {
+    width: 6px; /* Lebar scrollbar */
+  }
+
+  .sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar-scroll::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Default transparan */
+    border-radius: 20px; /* Rounded biar halus */
+    border: 2px solid transparent; /* Padding trick */
+    background-clip: content-box;
+  }
+
+  /* Saat di-hover, thumb jadi abu-abu */
+  .sidebar-scroll:hover::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1; /* slate-300 */
+  }
+}
