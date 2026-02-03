@@ -81,12 +81,19 @@ export const ProjectChart = () => {
       <div className="flex justify-between items-start mb-2 flex-none gap-2">
         <div>
           <h3 className="text-base font-bold text-gray-800">Project Graph</h3>
-          <p className="text-[10px] text-gray-400 leading-tight">Monthly stats</p>
+          <p className="text-[10px] text-gray-400 leading-tight">This is a long chart description</p>
         </div>
-        <button className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-xs text-gray-500 hover:border-emerald-500 transition-colors whitespace-nowrap">
-          <span className="hidden sm:inline text-gray-400">Date</span>
-          <Calendar className="w-3 h-3 text-gray-400" />
-        </button>
+        <div className="relative flex items-center bg-white border border-gray-200 rounded-lg px-3 py-1.5 hover:border-emerald-500 transition-colors cursor-pointer group">
+          <input 
+            type="date" 
+            className="absolute inset-0 opacity-0 cursor-pointer z-10" 
+            onChange={(e) => console.log(e.target.value)}
+          />
+          <span className="text-[10px] md:text-xs text-gray-400 mr-1 whitespace-nowrap">Start</span>
+          <span className="text-[10px] md:text-xs text-gray-300 mx-0.5">→</span>
+          <span className="text-[10px] md:text-xs text-gray-400 mr-1 whitespace-nowrap">End</span>
+          <Calendar className="w-3 h-3 text-gray-400 group-hover:text-emerald-500" />
+        </div>
       </div>
 
       <div className="flex-1 w-full relative min-h-0">
