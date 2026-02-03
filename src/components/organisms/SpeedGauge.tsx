@@ -1,7 +1,7 @@
 import { Calendar } from 'lucide-react';
 
 export const SpeedGauge = () => {
-  const cx = 150; const cy = 125; const r = 135; const thickness = 18;
+  const cx = 150; const cy = 126; const r = 135; const thickness = 18;
   const currentValue = 80; const maxValue = 200;
 
   const polarToCartesian = (cx: number, cy: number, r: number, angle: number) => {
@@ -17,12 +17,10 @@ export const SpeedGauge = () => {
   const needleAngle = (currentValue / maxValue) * 180;
 
   return (
-    /* REVISI: min-h dinaikkan ke 300px di mobile agar Legend tidak terpotong */
     <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex flex-col w-full h-full min-h-[300px] md:min-h-0 overflow-hidden">
       
       <div className="flex justify-between items-start mb-2 flex-none gap-2">
         <div>
-          {/* Ukuran teks Judul & Deskripsi tetap, tidak diubah */}
           <h3 className="text-base font-bold text-gray-800">Project Graph</h3>
           <p className="text-[10px] text-gray-400 leading-tight">This is a long chart description</p>
         </div>
@@ -39,7 +37,6 @@ export const SpeedGauge = () => {
         </div>
       </div>
 
-      {/* REVISI: pb-6 (padding bottom) ditambahkan agar Legend punya ruang di bawah */}
       <div className="flex-1 flex flex-col items-center justify-center relative min-h-0 w-full px-2 sm:px-0 pb-6 md:pb-0">
         <svg 
           viewBox="-20 -10 340 220" 
